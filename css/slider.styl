@@ -1,0 +1,88 @@
+@import 'mixins.styl';
+.slick-slider
+  position relative
+  display block
+  box-sizing border-box
+  -webkit-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  -webkit-touch-callout none
+  -khtml-user-select none
+  -ms-touch-action pan-y
+  -webkit-tap-highlight-color transparent
+.slick-list
+  position relative
+  display block
+  overflow hidden
+  margin 0
+  padding 0
+  outline none
+  &:focus
+    outline none
+  &.dragging
+    cursor pointer
+.slick-slider .slick-track,
+.slick-slider .slick-list
+  transform translate3d(0, 0, 0)
+.slick-track
+  position relative
+  top 0
+  left 0
+  display block
+  &:after
+    clear both
+.slick-track:before,
+.slick-track:after
+  display table
+  content ''
+.slick-loading
+  .slick-track
+    visibility hidden
+  .slick-slide
+    visibility hidden
+.slick-slide
+  display none
+  float left
+  height 100%
+  min-height 1px
+  outline none
+  &:active,&:focus
+    outline none
+  img
+    display block
+  &.slick-loading
+    img
+      display none
+[dir='rtl']
+  .slick-slide
+    float right
+.slick-initialized
+  .slick-slide
+    display block
+.slick-vertical
+  .slick-slide
+    display block
+    height auto
+    border 1px solid transparent
+.slick-arrow
+  display block
+  margin 0
+  padding 0
+  background none
+  border none
+  text-indent -9999px
+  width 11px
+  height 17px
+  position absolute
+  &.slick-hidden
+    display none
+.slick-prev
+  background url(../images/slideArrows.png) top left
+  left 0
+  &:hover
+    background url(../images/slideArrows.png) bottom left
+.slick-next
+  background url(../images/slideArrows.png) top right
+  right 0
+  &:hover
+    background url(../images/slideArrows.png) bottom right
